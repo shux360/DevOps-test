@@ -16,9 +16,15 @@ pipeline {
             }
         }
 
-         stage('Run Python Script') {
+        stage('Set Up Virtual Environment') {
             steps {
-                // Execute the Python script
+                bat 'python -m venv venv'
+                bat 'call venv\\Scripts\\activate'
+            }
+        }
+
+        stage('Run Python Script') {
+            steps {
                 bat 'python hello_world.py'
             }
         }
