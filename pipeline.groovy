@@ -16,10 +16,10 @@ pipeline {
             }
         }
 
-        stage('Run Python Script') {
-            steps {
-                bat 'helloworld.py'
-            }
-        }
+        // stage('Run Python Script') {
+        //     steps {
+        //         bat 'helloworld.py'
+        //     }
+        // }
     }
 }
